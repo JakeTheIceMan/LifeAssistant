@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.activity.CreateActivityScreen">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/createActivityTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:text="@string/create_activity_title"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:text="@string/CreateActivityDescription"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/createActivityBackButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/ic_back_icon"/>
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15.5"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/createActivityNameLabel"
+            android:text="@string/activity_name_label"
+            android:textSize="22sp"
+            android:labelFor="@id/createActivityNameEditText"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="4dp"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/createActivityNameEditText"
+            android:hint="@string/activity_name_hint"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/createActivityColorLabel"
+            android:text="@string/activity_color_label"
+            android:textSize="22sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="4dp"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+
+        <GridView
+            android:layout_marginTop="15dp"
+            android:id="@+id/createActivityColorGrid"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:numColumns="6"
+            />
+
+        <Button
+            android:id="@+id/createActivityAddRuleButton"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/lightGrey"
+            android:text="@string/add_rule_button_text" />
+
+        <ListView
+            android:id="@+id/CreateActivityListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null">
+
+
+        </ListView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/createActivityButtonLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        >
+
+        <Button
+            android:id="@+id/createActivityDeleteButton"
+            android:background="@color/red"
+            android:text="@string/delete_button_text"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_gravity="fill"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/createActivitySaveButton"
+            android:background="@color/green"
+            android:text="@string/save_button_text"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_gravity="fill"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

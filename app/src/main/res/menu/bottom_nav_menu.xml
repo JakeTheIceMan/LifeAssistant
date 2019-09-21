@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_activity"
+        android:icon="@drawable/icon_runningman"
+        android:title="@string/Activity" />
+
+    <item
+        android:id="@+id/navigation_scheduler"
+        android:icon="@drawable/iconfinder_calendar"
+        android:title="@string/Schedule" />
+
+    <item
+        android:id="@+id/navigation_spontaneous"
+        android:icon="@drawable/lightning_icon"
+        android:title="@string/Spontaneous" />
+
+    <item
+        android:id="@+id/navigation_history"
+        android:icon="@drawable/icon_history"
+        android:title="@string/History" />
+
+</menu>

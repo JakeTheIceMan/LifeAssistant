@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.activity.ActivityScreen"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Activity"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="@string/ActivityDescription"
+        android:textSize="16sp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_weight="15"
+        android:layout_height="0dp">
+
+        <ListView
+            android:id="@+id/activityListView"
+            android:divider="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="80dp"
+            android:clipToPadding="false"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <ImageButton
+                    android:id="@+id/activityListButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/btn_background"
+                    android:src="@drawable/ic_add_icon"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <fragment
+        android:id="@+id/ActivityNavigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:name="edu.northeastern.lifeassistant.activities.NavigationBarFragment"
+        android:layout_weight="2"/>
+
+</LinearLayout>
